@@ -65,7 +65,7 @@ module Dalli
           socket.puts command
         
           data = ""
-          until (line = socket.readline) =~ /END/
+          until (line = socket.readline) =~ /END|ERROR/
             data << line
           end
         
